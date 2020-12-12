@@ -3,10 +3,10 @@
   "description": "TODO",
   "version": "0.0.1",
   "scripts": {
-    "dev": "sapper dev",
+    "dev": "sapper -p 3001 dev",
     "build": "sapper build",
     "export": "sapper export",
-    "start": "node __sapper__/build"
+    "start": "node -p 3001 __sapper__/build"
   },
   "dependencies": {
     "compression": "^1.7.1",
