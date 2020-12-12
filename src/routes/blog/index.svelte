@@ -1,10 +1,17 @@
 <script context="module">
-	export function preload() {
-		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
-			return { posts };
-		});
+	// console.log('module script');
+	export async function preload(page, session) {
+		  const res = await this.fetch('/blog.json');
+		  const todos = await res.json();
+		  return { todos };
 	}
-</script>
+  </script>
+  
+  <script>
+	// console.log('component script');
+	export let todos;
+	console.log(todos);
+  </script>
 
 <script>
 	export let posts;
